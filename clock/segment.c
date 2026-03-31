@@ -12,8 +12,8 @@ Segment new_segment(Vector2 center, float angle) {
 }
 
 void draw_segment(Segment *segment) {
-  float x = segment->center.x;
-  float y = segment->center.y;
+  float x = segment->position.x;
+  float y = segment->position.y;
   int l = segment->length;
   int t = segment->thickness;
 

@@ -4,7 +4,7 @@
 #include <raylib.h>
 
 typedef struct Segment {
-  Vector2 center;
+  Vector2 position;
   float angle;
   int length;
   int thickness;
@@ -12,7 +12,7 @@ typedef struct Segment {
 
 #define ON RED
 
-Segment new_segment(Vector2 center, float angle);
+Segment new_segment(Vector2 position, float angle);
 void draw_segment(Segment *segment);
 
 #endif
