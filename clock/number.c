@@ -25,6 +25,18 @@ Number new_number(unsigned short number, Vector2 position) {
 	return num;
 }
 
+void update_number(Number *num, unsigned short value) {
+	char buffer[7];
+
+	snprintf(buffer, sizeof(buffer), "%0*d", num->len, value);
+
+	for (int i = 0; i < num->len; i++) {
+		int digit = buffer[i] - '0';
+
+		num->digits[i] = new_digit(num->digits[i].position, digits[digit]);
+	}
+}
+
 void draw_number(Number *num) {
 	for (int i = 0; i < num->len; i++) {
 		draw_digit(&num->digits[i]);

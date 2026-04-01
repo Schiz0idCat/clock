@@ -11,6 +11,7 @@ typedef struct {
 } Number;
 
 Number new_number(unsigned short number, Vector2 position);
+void update_number(Number *num, unsigned short value);
 void draw_number(Number *num);
 void free_number(Number *num);
 

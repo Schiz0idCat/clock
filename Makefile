@@ -6,6 +6,7 @@ SRC = main.c \
       clock/segment.c \
 	  clock/digit.c \
 	  clock/number.c \
+	  clock/time.c \
       tools/math/my_math.c
 
 OUT = main

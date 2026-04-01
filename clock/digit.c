@@ -22,7 +22,7 @@ Digit new_digit(Vector2 position, const char number[SEGMENTS_LEN]) {
 	float oy = position.y;
 	float L = SEG_LENGTH;
 
-	float gap = 2.5f;
+	float gap = 2.6f;
 
 	a = (Vector2){ox, oy - L * gap};					   // up
 	b = (Vector2){ox - (L / 2) * gap, oy - (L / 2) * gap}; // up left

@@ -1,15 +1,13 @@
 #include "clock.h"
 
-const int WIDTH = 1200;
+const int WIDTH = 1500;
 const int HEIGHT = 400;
 
 int main() {
-	const time_t curr_time = time(NULL);
-	char *time_str = ctime(&curr_time);
 
 	InitWindow(WIDTH, HEIGHT, TITLE);
 
-	Number number = new_number(4367, CENTER);
+	Time t = new_time(CENTER);
 
 	while (!WindowShouldClose()) {
 		if (IsKeyPressed(KEY_Q)) {
@@ -19,12 +17,15 @@ int main() {
 		BeginDrawing();
 		ClearBackground(BLACK);
 
-		draw_number(&number);
+		update_time(&t);
+		draw_time(&t);
 
 		EndDrawing();
 	}
 
 	CloseWindow();
+
+	free_time(&t);
 
 	return 0;
 }
