@@ -5,7 +5,6 @@
 #include <raylib.h>
 
 #define SEGMENTS_LEN 7
-#define NUMBERS 10
 
 #define ZERO {1, 1, 1, 0, 1, 1, 1}
 #define ONE {0, 0, 1, 0, 0, 1, 0}

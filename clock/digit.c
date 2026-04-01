@@ -1,9 +1,6 @@
 #include "digit.h"
 #include "../tools/math/my_math.h"
 
-const int DIGIT_MAP[NUMBERS][SEGMENTS_LEN] = {ZERO, ONE, TWO,	THREE, FOUR,
-											  FIVE, SIX, SEVEN, EIGHT, NINE};
-
 Digit new_digit(Vector2 position) {
 	Vector2 a, b, c, d, e, f, g;
 	Digit digit;
