@@ -1,7 +1,7 @@
 #ifndef SEGMENT_H
 #define SEGMENT_H
 
-#include <raylib.h>
+#include "raylib.h"
 
 typedef struct Segment {
 	Vector2 position;

@@ -23,7 +23,7 @@ void update_time(Time *ct) {
 	update_number(&ct->seconds, (unsigned short)t->tm_sec);
 }
 
-static void draw_separator(Vector2 pos) {
+void draw_separator(Vector2 pos) {
 	float radius = 30.0f;
 	float offset = 60.0f;
 
