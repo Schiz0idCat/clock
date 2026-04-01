@@ -4,6 +4,7 @@ LIBS = $(shell pkg-config --libs raylib) -lm
 
 SRC = main.c \
       clock/segment.c \
+	  clock/digit.c \
       tools/math/my_math.c
 
 OUT = main
