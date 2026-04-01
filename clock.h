@@ -6,7 +6,7 @@
 #include <stdbool.h>
 #include <time.h>
 
-#include "clock/segment.h"
+#include "clock/digit.h"
 #include "tools/math/my_math.h"
 #include "tools/window/window.h"
 
