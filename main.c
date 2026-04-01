@@ -4,7 +4,7 @@ const int WIDTH = 1500;
 const int HEIGHT = 400;
 
 int main() {
-
+	SetTargetFPS(30);
 	InitWindow(WIDTH, HEIGHT, TITLE);
 
 	Time t = new_time(CENTER);
