@@ -9,7 +9,7 @@ int main() {
 
 	InitWindow(WIDTH, HEIGHT, TITLE);
 
-	Digit digit = new_digit(CENTER);
+	Digit digit = new_digit(CENTER, digits[0]);
 	// Segment segment = new_segment(CENTER, deg2rad(180));
 
 	while (!WindowShouldClose()) {

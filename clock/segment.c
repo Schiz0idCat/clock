@@ -1,8 +1,8 @@
 #include "segment.h"
 #include <math.h>
 
-Segment new_segment(Vector2 position, float angle) {
-	return (Segment){position, angle, SEG_LENGTH, SEG_THICKNESS};
+Segment new_segment(Vector2 position, float angle, bool on) {
+	return (Segment){position, angle, SEG_LENGTH, SEG_THICKNESS, on};
 }
 
 void draw_segment(Segment *segment) {
@@ -29,5 +29,5 @@ void draw_segment(Segment *segment) {
 
 		{x + dir.x * (l + t), y + dir.y * (l + t)}};
 
-	DrawTriangleStrip(points, len, ON);
+	DrawTriangleStrip(points, len, segment->on ? ON : OFF);
 }

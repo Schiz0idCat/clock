@@ -1,7 +1,20 @@
 #include "digit.h"
 #include "../tools/math/my_math.h"
 
-Digit new_digit(Vector2 position) {
+const char digits[DIGITS_LEN][SEGMENTS_LEN] = {
+	{1, 1, 1, 0, 1, 1, 1}, // zero
+	{0, 0, 1, 0, 0, 1, 0}, // one
+	{1, 0, 1, 1, 1, 0, 1}, // two
+	{1, 0, 1, 1, 0, 1, 1}, // trhee
+	{0, 1, 1, 1, 0, 1, 0}, // four
+	{1, 1, 0, 1, 0, 1, 1}, // five
+	{1, 1, 0, 1, 1, 1, 1}, // six
+	{1, 0, 1, 0, 0, 1, 0}, // seven
+	{1, 1, 1, 1, 1, 1, 1}, // eight
+	{1, 1, 1, 1, 0, 1, 1}  // nine
+};
+
+Digit new_digit(Vector2 position, const char number[SEGMENTS_LEN]) {
 	Vector2 a, b, c, d, e, f, g;
 	Digit digit;
 
@@ -21,13 +34,13 @@ Digit new_digit(Vector2 position) {
 
 	digit.position = position;
 
-	digit.segments[0] = new_segment(a, deg2rad(180));
-	digit.segments[1] = new_segment(b, deg2rad(90));
-	digit.segments[2] = new_segment(c, deg2rad(90));
-	digit.segments[3] = new_segment(d, deg2rad(180));
-	digit.segments[4] = new_segment(e, deg2rad(90));
-	digit.segments[5] = new_segment(f, deg2rad(90));
-	digit.segments[6] = new_segment(g, deg2rad(180));
+	digit.segments[0] = new_segment(a, deg2rad(180), number[0]);
+	digit.segments[1] = new_segment(b, deg2rad(90), number[1]);
+	digit.segments[2] = new_segment(c, deg2rad(90), number[2]);
+	digit.segments[3] = new_segment(d, deg2rad(180), number[3]);
+	digit.segments[4] = new_segment(e, deg2rad(90), number[4]);
+	digit.segments[5] = new_segment(f, deg2rad(90), number[5]);
+	digit.segments[6] = new_segment(g, deg2rad(180), number[6]);
 
 	return digit;
 }
