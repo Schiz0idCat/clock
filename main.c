@@ -9,8 +9,7 @@ int main() {
 
 	InitWindow(WIDTH, HEIGHT, TITLE);
 
-	Digit digit = new_digit(CENTER, digits[0]);
-	// Segment segment = new_segment(CENTER, deg2rad(180));
+	Number number = new_number(4367, CENTER);
 
 	while (!WindowShouldClose()) {
 		if (IsKeyPressed(KEY_Q)) {
@@ -20,8 +19,7 @@ int main() {
 		BeginDrawing();
 		ClearBackground(BLACK);
 
-		draw_digit(&digit);
-		// draw_segment(&segment);
+		draw_number(&number);
 
 		EndDrawing();
 	}
