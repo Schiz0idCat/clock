@@ -13,7 +13,7 @@ typedef struct Segment {
 } Segment;
 
 #define ON RED
-#define OFF DARKGRAY
+#define OFF (Color){40, 40, 40, 255}
 
 #define SCALE_UNIT fminf(GetScreenWidth() / 1500.0f, GetScreenHeight() / 400.0f)
 #define SEG_LENGTH (60.0f * SCALE_UNIT)
