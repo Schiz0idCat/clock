@@ -5,6 +5,8 @@ Time new_time(Vector2 position) {
 	Time ct;
 	float gap = 500.0f; // gap between HH, MM and SS
 
+	ct.position = position;
+
 	ct.hour = new_number(11, (Vector2){position.x - gap, position.y});
 	ct.minutes = new_number(11, (Vector2){position.x, position.y});
 	ct.seconds = new_number(11, (Vector2){position.x + gap, position.y});
@@ -36,10 +38,10 @@ void draw_time(Time *ct) {
 	draw_number(&ct->minutes);
 	draw_number(&ct->seconds);
 
-	float gap = 500.0f;
+	float gap = 250.0f;
 
-	draw_separator((Vector2){ct->position.x + gap, ct->position.y + 200});
-	draw_separator((Vector2){ct->position.x + gap + gap, ct->position.y + 200});
+	draw_separator((Vector2){ct->position.x + gap, ct->position.y});
+	draw_separator((Vector2){ct->position.x - gap, ct->position.y});
 }
 
 void free_time(Time *ct) {
