@@ -2,6 +2,7 @@
 #define SEGMENT_H
 
 #include "raylib.h"
+#include <math.h>
 
 typedef struct Segment {
 	Vector2 position;
@@ -14,11 +15,9 @@ typedef struct Segment {
 #define ON RED
 #define OFF DARKGRAY
 
-extern const int WIDTH;
-extern const int HEIGHT;
-
-#define SEG_LENGTH HEIGHT * 0.15f
-#define SEG_THICKNESS WIDTH * 0.01f
+#define SCALE_UNIT fminf(GetScreenWidth() / 1500.0f, GetScreenHeight() / 400.0f)
+#define SEG_LENGTH (60.0f * SCALE_UNIT)
+#define SEG_THICKNESS (10.0f * SCALE_UNIT)
 
 Segment new_segment(Vector2 position, float angle, bool on);
 void draw_segment(Segment *segment);

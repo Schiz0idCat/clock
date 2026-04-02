@@ -11,7 +11,7 @@ typedef struct {
 	Vector2 position;
 } Time;
 
-Time new_time(Vector2 position);
+Time new_time();
 void update_time(Time *ct);
 void draw_time(Time *ct);
 void free_time(Time *ct);
