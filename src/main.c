@@ -1,8 +1,13 @@
 #include "clock.h"
 
 int main() {
-	int window_width = 800;
-	int window_height = 450;
+	// these two variables should be a function that gets the resolution
+	// dynamically, but I don't know how to do it with hyprland.
+	int native_width = 1920;
+	int native_height = 1080;
+
+	int window_width = native_width * 0.6f;
+	int window_height = native_height * 0.3f;
 
 	SetConfigFlags(FLAG_WINDOW_RESIZABLE);
 	SetTargetFPS(30);
